@@ -23,10 +23,10 @@
 
 //CODE HERE
 
-const greetUser = (username) => {
-    return `Welcome back, ${username}`
-}
-console.log(greetUser('Andrew'))
+// const greetUser = (username) => {
+//     return `Welcome back, ${username}`
+// }
+// console.log(greetUser('Andrew'))
 
 
 
@@ -54,7 +54,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+// function canWeDeliver(zipCode) {
+//         if (deliveryAreaZipCodes.includes(zipCode)){
+//             console.log("You're in our delivery zone!")
+//         }else {
+//             console.log("Sorry we can't deliver to that address")
+//         }
+// }
 
+// canWeDeliver(84606)
+// canWeDeliver(85205)
 
 /* 
     Problem 2 Continued
@@ -74,6 +83,31 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
+
+function canWeDeliverTwo(zipCode) {
+    let delivery = true
+    for (i = 0; i < deliveryAreaZipCodes.length; i++){
+        if (deliveryAreaZipCodes[i] == zipCode){
+            delivery = true
+            return console.log("You're in our delivery zone!")
+            // break
+        }else if (deliveryAreaZipCodes[i] != zipCode) {
+            delivery = false
+        }
+    }
+    if (delivery = false){
+        console.log("Sorry we can't deliver to that address")
+    }
+    
+}
+
+// const canWeDeliverTwo = deliveryAreaZipCodes.filter(delivery)
+// function delivery(zipCode) {
+//     if ()
+// }
+// canWeDeliverTwo(85205)
+
+// canWeDeliverTwo(84606)
 
 
 //////////////////PROBLEM 3////////////////////
@@ -111,6 +145,19 @@ const deals = [
 
 //CODE HERE
 
+
+// const changeDeal = (arr) => {
+//     arr.forEach((element, index) => {
+//         // console.log(element[0])
+//         element[1].replace('15', '10')
+//     })
+// }
+
+// // let newTitle = deals[0].replace('15', '10')
+
+// // deals[' = deals['title'].replace('15', '10')
+// changeDeal(deals)
+// // console.log(deals)
 
 
 /*

@@ -32,6 +32,14 @@
 
 //CODE HERE
 
+let pizza = {
+    name: 'pepperoni pizza',
+    price: 12,
+    category: 'entree',
+    popularity: 8,
+    rating:74,
+    tags: ['pepperoni', 'cheese', 'sauce'],
+}
 
 
 //////////////////PROBLEM 2////////////////////
@@ -44,6 +52,7 @@
 
 //CODE HERE
 
+// console.log(pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -54,6 +63,7 @@
 
 //CODE HERE
 
+// console.log(pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -64,6 +74,9 @@
 
 //CODE HERE
 
+let {price: newPrice} = pizza
+newPrice = 8.5
+// console.log(newPrice)
 
 /*
     Fourth, and last, destructure the category
@@ -74,6 +87,8 @@
 
 //CODE HERE
 
+let {category} = pizza
+// console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -89,6 +104,44 @@
 
 //CODE HERE
 
+foodArr = [
+    {name: 'pizza',
+    price: 10,
+    category: 'entree',
+    popularity: 8,
+    rating: 74,
+    tags: ['pepperoni', 'cheese', 'sauce']},
+    
+    {name: 'cheeseburger',
+    price: 11,
+    category: 'entree',
+    popularity: 9,
+    rating: 80,
+    tags: ['patty', 'cheese', 'ketchup']},
+
+    {name: 'salad',
+    price: 6,
+    category: 'appetizer',
+    popularity: 7,
+    rating: 69,
+    tags: ['lettuce', 'ranch']},
+
+    {name: 'breadstick',
+    price: 4,
+    category: 'appetizer',
+    popularity: 7,
+    rating: 72,
+    tags: ['bread', 'cheese'],},
+
+    {name: 'stew',
+    price: 11.5,
+    category: 'entree',
+    popularity: 9,
+    rating: 84,
+    tags: ['chicken', 'water', 'carrot'],}
+
+]
+// console.log(foodArr)
 
 
 //////////////////PROBLEM 4////////////////////
@@ -105,7 +158,14 @@
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((element) => {
+    if (element.tags.includes('cheese')) {
+        return element
+    }
+})
+
+// console.log(filteredFood)
+
 
 
 
@@ -149,6 +209,35 @@
 */
 
 //CODE HERE
+
+// const filterByProperty = foodArr.filter(function(property, number, type) {
+//     let filteredArray = []
+//     if (type === 'above'){
+//         return property > number
+//     }else if (type === 'below'){
+//         return property < number
+//     }
+//     return filteredArray
+// })
+
+// const filterByProperty = foodArr.filter(callback)
+// function callback(property, number, type){
+//     let filteredArray = []
+//     if (type === 'above'){
+//         filteredArray.push(property > number)
+//     }else if (type === 'below'){
+//         filteredArray.push(property < number)
+//     }
+//     return filteredArray
+// }
+
+console.log(filterByProperty)
+
+
+// function filterByProperty(property, number, type) {
+//     let filteredArray = []
+
+// }
 
 
 /*

@@ -35,8 +35,21 @@ const cart = [
 
 //CODE HERE
 
-// const summedPrice = cart.reduce(/* CALLBACK HERE */)
+const allPrices = cart.reduce((acc, curr) => {
+    return acc + curr.price
+})
+console.log(allPrices)
 
+
+// .reduce((acc, curr) => {
+//     return acc + curr.price 
+//     console.log(acc)
+//   }, 0)
+
+// const bobsOrders = purchases.filter(findBobsOrders)
+// function findBobsOrders(owner){
+//   return owner.owner === 'Bob'
+// }
 
 //////////////////PROBLEM 2////////////////////
 /*  
