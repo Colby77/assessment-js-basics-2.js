@@ -35,21 +35,15 @@ const cart = [
 
 //CODE HERE
 
+let initialValue = 0
 const allPrices = cart.reduce((acc, curr) => {
     return acc + curr.price
-})
-console.log(allPrices)
+}, 0)
+
+// callback()
+// console.log(allPrices)
 
 
-// .reduce((acc, curr) => {
-//     return acc + curr.price 
-//     console.log(acc)
-//   }, 0)
-
-// const bobsOrders = purchases.filter(findBobsOrders)
-// function findBobsOrders(owner){
-//   return owner.owner === 'Bob'
-// }
 
 //////////////////PROBLEM 2////////////////////
 /*  
@@ -68,7 +62,13 @@ console.log(allPrices)
 
 //CODE HERE
 
+const calcFinalPrice = (carTotal, couponValue, tax) => {
+    let carTaxed = carTotal * (1 + tax)
+    let carFinal = carTotal - couponValue
+    return carFinal
+}
 
+// console.log(calcFinalPrice(20000, 500, .06))
 
 //////////////////PROBLEM 3////////////////////
 /*  
@@ -92,6 +92,11 @@ console.log(allPrices)
 
 /*
     TEXT ANSWER HERE
+    customer info needed for online shopping: 
+    -name
+    -email
+    -addres
+    -payment method
 
 */
 
@@ -101,3 +106,13 @@ console.log(allPrices)
 */
 
 //CODE HERE
+
+let customer = {
+
+    name: 'willow',
+    email: 'willow456@themovie.com',
+    address: '1234 west 567 north',
+    payment: 'PayPal'
+}
+
+console.log(customer)
